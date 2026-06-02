@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ford</title>
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">
+    <script src="js/form.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="site-header__logo">
+            <img src="img/logo-ford-256.png" alt="Logo Ford">
+        </div>
+        <nav class="site-header__nav">
+            <a href="index.html">Home</a>
+            <a href="lancamento.html">Lançamento</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
+
+    <main class="site-main">
+        <div class="pagina-contato">
+
+            <div class="contato-imagem">
+                <img src="img/xls 2.2 diesel.jpg" alt="Ford Ranger XLS">
+            </div>
+
+            <div class="contato-formulario">
+                <h2>Sobre Você</h2>
+
+                <form onsubmit="Post(this); return false;">
+
+                    <input type="text" name="nome" placeholder="NOME*" required>
+
+                    <input type="email" name="email" placeholder="E-MAIL*" required>
+
+                    <input type="tel" name="telefone" placeholder="TELEFONE*" required>
+
+                    <span class="radio-label">TIPO DE CONTATO*</span>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="tipo" value="elogio" required> Elogio
+                        </label>
+                        <label>
+                            <input type="radio" name="tipo" value="reclamacao"> Reclamação
+                        </label>
+                        <label>
+                            <input type="radio" name="tipo" value="solicitacao"> Solicitação
+                        </label>
+                    </div>
+
+                    <textarea name="mensagem" placeholder="MENSAGEM*" required></textarea>
+
+                    <!-- LGPD: texto de consentimento -->
+                    <p class="lgpd-texto">
+                        Os dados serão mantidos em nossa base de dados, só enquanto for desejado por você.
+                        A qualquer momento, será possível editar ou remover tais dados.
+                    </p>
+
+                    <!-- LGPD: checkboxes de consentimento -->
+                    <div class="lgpd-checkboxes">
+                        <label class="lgpd-label">
+                            <input type="checkbox" id="aceite-termos" name="aceite-termos" onchange="verificarAceite()">
+                            Sim. Li e concordo com os
+                            <a href="https://www.ford.com.br/politica-de-privacidade/" target="_blank" rel="noopener noreferrer">Termos e Condições</a>.
+                        </label>
+
+                        <label class="lgpd-label">
+                            <input type="checkbox" id="aceite-novidades" name="aceite-novidades">
+                            Sim. Também quero receber descontos e novidades.
+                        </label>
+                    </div>
+
+                    <button type="submit" id="btn-enviar" disabled>Enviar</button>
+
+                </form>
+
+                <div id="mensagem-agradecimento"></div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="rodape">
+        <div class="rodape__redes">
+            <span class="rodape__redes-titulo">Redes Sociais</span>
+            <a href="https://www.facebook.com/ford" title="Facebook"><img src="img/facebook-50.png" alt="Facebook"></a>
+            <a href="https://www.youtube.com/ford" title="YouTube"><img src="img/youtube-squared-50.png" alt="YouTube"></a>
+            <a href="https://www.instagram.com/ford" title="Instagram"><img src="img/instagram-logo-50.png" alt="Instagram"></a>
+        </div>
+        <img src="img/ford-96.png" class="rodape__logo" alt="Ford">
+    </footer>
+
+</body>
+</html>
